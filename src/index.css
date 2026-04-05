@@ -1033,8 +1033,6 @@ footer span.acc { color: var(--accent); }
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
-
-/* RESPONSIVE FIX */
 .hero-stats-bar {
   position: absolute;
   bottom: 3rem;
@@ -1048,25 +1046,6 @@ footer span.acc { color: var(--accent); }
   border-radius: 14px;
   backdrop-filter: blur(16px);
   animation: fadeUp 1s ease 0.6s both;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 960px) {
-  .hero-stats-bar {
-    position: static !important;
-    width: 100%;
-    margin-top: 2rem;
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: center !important;
-    align-items: center;
-    gap: 1rem;
-  }
-  .stat-item + .stat-item {
-    border-left: none !important;
-    padding-left: 0 !important;
-  }
 }
 
 /* FIX 2: CIRCLE PHOTO */
