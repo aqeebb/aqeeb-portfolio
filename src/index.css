@@ -1029,7 +1029,7 @@ footer span.acc { color: var(--accent); }
   .hero-bio { max-width: 100%; }
   .hero-ctas { justify-content: center; }
   .hero-socials { justify-content: center; }
-  .hero-stats-bar { position: static; margin-top: 6rem; flex-wrap: wrap; gap: 1rem; }
+  .hero-stats-bar { position: static; margin-top: 2rem; flex-wrap: wrap; gap: 1rem; }
   .stat-item + .stat-item { border-left: none; padding-left: 0; }
 }
 
@@ -1203,6 +1203,13 @@ footer span.acc { color: var(--accent); }
   .about-wrap { grid-template-columns: 1fr; gap: 2rem; }
   footer { flex-direction: column; gap: 0.75rem; text-align: center; }
   .footer-links { justify-content: center; }
+  .hero-stats-bar { 
+  margin-top: 1.5rem; 
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+.stat-item + .stat-item { border-left: none; padding-left: 0; }
 }
 
 /* cursor: pointer on mobile (cursor:none breaks tap) */
