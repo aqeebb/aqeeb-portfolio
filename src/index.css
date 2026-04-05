@@ -799,6 +799,19 @@ footer span.acc { color: var(--accent); }
   .about-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .nav-links { display: none; }
+  .hero-stats-bar {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stat-item + .stat-item {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 @media (max-width: 640px) {
   .section { padding: 80px 5%; }
@@ -1206,8 +1219,11 @@ footer span.acc { color: var(--accent); }
   .hero-stats-bar { 
   margin-top: 1.5rem; 
   padding: 1rem;
-  grid-template-columns: 1fr 1fr;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 }
 .stat-item + .stat-item { border-left: none; padding-left: 0; }
 }
