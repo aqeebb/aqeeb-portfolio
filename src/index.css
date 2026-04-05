@@ -1035,15 +1035,38 @@ footer span.acc { color: var(--accent); }
 .footer-links a:hover { color: var(--accent); }
 
 /* RESPONSIVE FIX */
+.hero-stats-bar {
+  position: absolute;
+  bottom: 3rem;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  gap: 2rem;
+  padding: 1.2rem 2rem;
+  background: rgba(15,23,36,0.8);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  backdrop-filter: blur(16px);
+  animation: fadeUp 1s ease 0.6s both;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 960px) {
-  .hero-inner { flex-direction: column-reverse; align-items: center; text-align: center; }
-  .hero-photo-wrap { width: 220px; height: 260px; }
-  .hero-left { max-width: 100%; }
-  .hero-bio { max-width: 100%; }
-  .hero-ctas { justify-content: center; }
-  .hero-socials { justify-content: center; }
-  .hero-stats-bar { position: static; margin-top: 2rem; flex-wrap: wrap; gap: 1rem; }
-  .stat-item + .stat-item { border-left: none; padding-left: 0; }
+  .hero-stats-bar {
+    position: static !important;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stat-item + .stat-item {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
 }
 
 /* FIX 2: CIRCLE PHOTO */
