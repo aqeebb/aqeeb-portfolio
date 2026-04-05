@@ -799,19 +799,6 @@ footer span.acc { color: var(--accent); }
   .about-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .nav-links { display: none; }
-  .hero-stats-bar {
-    position: static;
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  .stat-item + .stat-item {
-    border-left: none;
-    padding-left: 0;
-  }
 }
 @media (max-width: 640px) {
   .section { padding: 80px 5%; }
@@ -1033,19 +1020,17 @@ footer span.acc { color: var(--accent); }
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
-.hero-stats-bar {
-  position: absolute;
-  bottom: 3rem;
-  left: 6%;
-  right: 6%;
-  display: flex;
-  gap: 2rem;
-  padding: 1.2rem 2rem;
-  background: rgba(15,23,36,0.8);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  backdrop-filter: blur(16px);
-  animation: fadeUp 1s ease 0.6s both;
+
+/* RESPONSIVE FIX */
+@media (max-width: 960px) {
+  .hero-inner { flex-direction: column-reverse; align-items: center; text-align: center; }
+  .hero-photo-wrap { width: 220px; height: 260px; }
+  .hero-left { max-width: 100%; }
+  .hero-bio { max-width: 100%; }
+  .hero-ctas { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .hero-stats-bar { position: static; margin-top: 6rem; flex-wrap: wrap; gap: 1rem; }
+  .stat-item + .stat-item { border-left: none; padding-left: 0; }
 }
 
 /* FIX 2: CIRCLE PHOTO */
@@ -1218,16 +1203,6 @@ footer span.acc { color: var(--accent); }
   .about-wrap { grid-template-columns: 1fr; gap: 2rem; }
   footer { flex-direction: column; gap: 0.75rem; text-align: center; }
   .footer-links { justify-content: center; }
-  .hero-stats-bar { 
-  margin-top: 1.5rem; 
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-}
-.stat-item + .stat-item { border-left: none; padding-left: 0; }
 }
 
 /* cursor: pointer on mobile (cursor:none breaks tap) */
